@@ -1,0 +1,311 @@
+        /* Reset e estrutura geral */
+        .hidden {
+            display: none;
+        }
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        conteiner1 {
+            height: 100vh;
+        }
+        conteiner2 {
+            height: 100vh;
+        }
+        .container1, .container2 {
+            width: 100%; /* Cada container ocupa toda a largura da tela */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+          }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #07291b;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            height: 100%;
+            width: 100%;
+
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Sobre mim */
+        #about {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        #about .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+          
+        }
+
+        #about .about-content img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(223, 14, 14, 0.1);
+        }
+
+        #about .about-text {
+            flex: 1;
+        }
+        
+
+        #about .about-text h2 {
+            font-size: 2.5rem;
+            color: #1e212d;
+            margin-bottom: 20px;
+        }
+
+        #about .about-text p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        #about .social-links ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        #about .social-links li {
+            display: inline;
+        }
+
+        #about .social-links a {
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #1e212d;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+
+        /* Formulário */
+        #contact {
+            padding: 60px 0;
+            background-color: #f4f4f9;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            color: #1e212d;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #contact .form-group {
+            margin-bottom: 20px;
+        }
+
+        #contact label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        #contact input,
+        #contact select,
+        #contact textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        #contact button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #1e212d;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        #contact button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1e212d;
+            color: #fff;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicando a animação aos elementos principais */
+#about .about-content, #contact form {
+    animation: fadeIn 1s ease-out;
+}
+
+/
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 1rem;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    #about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about .about-content img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    #about .about-text h2 {
+        font-size: 2rem;
+    }
+
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact form {
+        padding: 15px;
+    }
+
+    #contact .form-group input,
+    #contact .form-group select,
+    #contact .form-group textarea {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Para dispositivos móveis menores */
+@media (max-width: 480px) {
+    #about .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    #about .about-text p {
+        font-size: 1rem;
+    }
+
+    #contact form {
+        padding: 10px;
+    }
+
+    #contact .form-group input,
+    #contact .form-group select,
+    #contact .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    #botaoImprimir {
+        display: block;
+        margin: 30px auto;
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    #botaoImprimir:hover {
+        background-color: #0056b3;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+@media print {
+    header, #about * {
+        display:none; /* Oculta todos os elementos na página */
+    }
+
+    section * {
+        visibility: visible; /* Exibe apenas o conteúdo do formulário */
+    }
+
+    #botaoImprimir {
+        display: none; /* Oculta o botão de imprimir durante a impressão */
+    }
+}
