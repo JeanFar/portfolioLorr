@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     padding: 0;
     margin: 0;
-    color: #000000; /* Dourado pastel para o texto */
+    color: #000000; 
     font-size: 1.2rem; /* Ajuste para uma unidade mais consistente */
 }
 
@@ -263,11 +263,13 @@ conteiner3 {
 
 #instrucoes {
     width: 80%;
+    color: black;
 }
 
 .form-group label {
     font-size: 1.2rem;
     margin-bottom: 5px;
+    color: black;
 }
 
 .form-group input, .form-group select, .form-group textarea {
