@@ -1,17 +1,18 @@
-/* Reset e estrutura geral */
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: black;
-    background-size: cover; /* Torna o gradiente suave */
+    background-size: cover; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,39 +20,39 @@ body {
     padding: 0;
     margin: 0;
     color: #E8C65B; /* Dourado pastel para o texto */
+    font-size: 1.2rem; /* Ajuste para uma unidade mais consistente */
 }
 
-
 p {
-
-    font-family: 'Playfair Display', serif; /* Fonte elegante */
-    line-height: 1.5; /* Espaçamento entre as linhas */
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; /* Ajustado para rem, uma unidade relativa */
+    line-height: 1.5;
     text-align: left;
-    font-size: 2.8vh;
     color: white;
-    
-
 }
 
 #conteudo {
     padding: 0;
     display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
-    align-items: center; /* Centraliza horizontalmente os itens */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
-conteiner1, conteiner2, conteiner3{
+#conteiner1, #conteiner2 {
     padding: 0;
-    width: 100%;
-    height: 100%;
-    
+  
     display: flex;
     justify-content: center;
-    padding: 20px 0; /* Espaçamento entre os blocos */
-    margin: 10px
-    padding: 0;
-    
+    padding: 20px 0;
+    margin: 10px;
+    width: 100%;
+    max-width: 100%; /* Limita o máximo para 100% da largura disponível */
+    height: auto;
 }
+
+
+
 
 #topo {
     width: 60vh;
@@ -59,40 +60,31 @@ conteiner1, conteiner2, conteiner3{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 main {
-    height: 100vh;
+    
     flex-direction: column;
     align-items: center;
-    /* padding: 10px 0; */
     background: linear-gradient(145deg, #060706, #000000, #011801);
     width: 100%;
-    height:100%;
     border-radius: 1000px;
-    font-family: 'Playfair Display', serif; /* Fonte elegante */
-    font-size: 30px; /* Tamanho da fonte */
-    line-height: 1.5; /* Espaçamento entre as linhas */
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.5;
     text-align: justify;
     color: #E8C65B;
-    border: none; Sem borda para realce
+    border: none;
     box-shadow: 0 -4px 30px rgba(0, 51, 0, 0.3), 
-                0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para profundidade */
-    transition: transform 0.2s, box-shadow 0.2s; /* Suavidade */
+                0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #acao {
-
     font-size: 70%;
     font-weight: bolder;
     text-align: center;
-
-
-
 }
-
-
 
 #logo-sem-fundo {
     width: 160vh;
@@ -103,206 +95,189 @@ main {
 }
 
 #titulo-pilar {
-    font-size: 6vh;
+    font-size: 100%;
     text-align: center;
 }
+
 #pilares {
-    max-width: 40%;
+    max-width: 20%;
     text-align: center;
     margin-top: 0;
 }
 
-br {
-    height: 10px;
-}
-
-
 #metodologia {
     display: flex;
-
-
-    /* align-items: center; */
     gap: 30px;
     border-radius: 20px;
-    
-    display: flex;
-    /* justify-content: space-around; */
-
+    max-width: 100%;
 }
 
 #lemas {
-    display:flex;
-    /* flex-direction: column; */
-    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* Organiza em linha por padrão */
     align-items: center;
-
     margin-right: 200px;
-    margin-left: 200px;
-
+    margin-left: 20%;
     font-size: 3vh;
-    
 }
-
-
-
-
-
 
 #gastarmenos, #ganharmais, #investirmelhor {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 20%;
     flex-direction: column;
-    
 }
 
+@media (max-width: 768px) {
+    #lemas {
+        flex-direction: column; /* Altera para coluna em telas menores */
+        margin-left: 0; /* Remove a margem esquerda para telas menores */
+        margin-right: 0; /* Remove a margem direita para telas menores */
+        font-size: 4vh; /* Ajusta o tamanho da fonte para telas menores */
+    }
 
+    #gastarmenos, #ganharmais, #investirmelhor {
+        margin: 10%; /* Ajuste da margem para melhor disposição em telas menores */
+    }
+
+    #gastarmenos img, #ganharmais img, #investirmelhor img {
+        width: 60%; /* Ajuste das imagens para não ficarem grandes demais em telas pequenas */
+        margin-bottom: 10px; /* Adiciona espaço entre a imagem e o texto */
+    }
+
+    #lemas h1 {
+        font-size: 3rem; /* Ajusta o tamanho do título */
+        text-align: center; /* Centraliza o título */
+    }
+}
 
 h1 {
-
     margin-top: 20px;
-
-
-
-
 }
 
-#lemas {
-    margin-top: 0;
-}
 ul {
     margin-left: 0px;
     margin-right: 0px;
     width: 100%;
     height: 50%;
     display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte */
 }
 
-#lema2 {
-    margin-bottom: 5%;
-}
-#lema3 {
-    margin-top: 4%;
-}
-
-li{
-
+li {
     margin: 10px;
-    width: 90vh;
+    width: 30%;
     font-size: 2.53vh;
     list-style-type: none;
-    width: 30%;
-    height: 30%;
-    margin: 3%;
+    height: auto;
     padding: 0px;
 }
-
-
 
 #lema1, #lema2, #lema3 {
     align-items: center;
 }
 
-h1 {
-    display: flex;
-    align-items: center;
-    margin-left: 30px;
-}
-
-
-
-
 #logo-sem-fundo {
-
-    display:flex;
+    display: flex;
     justify-self: start;
 }
 
 #about {
-    height: 100vh;
+    margin: 1%;
+    max-width: 100%;
+    height: 100%;
     padding: 10px 0;
     background: linear-gradient(145deg, #060706, #000000, #011801);
     width: 100%;
     border-radius: 20px;
-    font-family: 'Playfair Display', serif; /* Fonte elegante */
-    font-size: 30px; /* Tamanho da fonte */
-    line-height: 1.5; /* Espaçamento entre as linhas */
-    color: #E8C65B; /* Texto dourado pastel */
-    border: none; /* Sem borda para realce */
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.5;
+    color: #E8C65B;
+    border: none;
     box-shadow: 0 -4px 30px rgba(0, 51, 0, 0.3), 
-                0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para profundidade */
-    transition: transform 0.2s, box-shadow 0.2s; /* Suavidade */
+                0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #about .about-content {
     display: flex;
     align-items: center;
     gap: 30px;
-    border-radius: 20px;
     justify-content: center;
-    text-align: center; /* Garante que o texto fique centralizado */
+    text-align: center;
 }
 
 #about .about-content img {
-    width: 100vh; /* Ajuste de tamanho para a imagem */
-    max-width: 40%; /* Garante que a imagem não ultrapasse o tamanho da tela */
-    border-radius: 50%; /* Deixa a imagem redonda */
+    width: 100%;
+    max-width: 40%;
+    border-radius: 50%;
     margin: 30px;
-    padding: 10px; /* Adiciona o espaçamento interno */
+    padding: 10px;
     border: 5px solid transparent;
     background: linear-gradient(rgba(22, 22, 22, 0.021), black) padding-box, 
-                linear-gradient(45deg, #000000c4, #0f7956) border-box; /* Moldura dourada */
-    box-shadow: 0 8px 20px rgba(12, 83, 56, 0.5), /* Sombra dourada */
-                0 0 30px rgba(6, 134, 85, 0.3); /* Sombra adicional */
+                linear-gradient(45deg, #000000c4, #0f7956) border-box;
+    box-shadow: 0 8px 20px rgba(12, 83, 56, 0.5),
+                0 0 30px rgba(6, 134, 85, 0.3);
 }
 
-
 #about .about-text {
-    padding: 0 20px;
+    padding: 0;
 }
 
 #contact {
-    padding: 30px 0;
+    padding: 0;
     background-color: #f4f4f9;
-    width: 100%;
+    width: 100%:
+    max-height: 100%;
+  
 }
+form{
+    width: 100%
+}
+conteiner3 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
 
 /* Estilo para o container do formulário */
 .container {
-   
     display: grid;
-    flex-direction:inherit;
-    justify-content: space-evenly; /* Distribui os elementos uniformemente ao longo da altura */
-    padding: 20px; /* Adiciona um pouco de espaço nas bordas */
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-/* Estilo para os grupos de formulários */
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px; /* Espaço entre os campos */
+    margin-bottom: 15px;
+    width: 70%;
 }
 
-/* Estilo para as labels */
+#instrucoes {
+    width: 80%;
+}
+
 .form-group label {
     font-size: 1.2rem;
-    margin-bottom: 5px; /* Espaço entre a label e o campo */
+    margin-bottom: 5px;
 }
 
-/* Estilo para os campos de entrada */
 .form-group input, .form-group select, .form-group textarea {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-/* Garantir que os campos de texto e áreas de texto se expandam para a largura total */
-.form-group input, .form-group select, .form-group textarea {
     width: 100%;
 }
 
-/* Estilo para os botões */
 button {
     padding: 12px 20px;
     background-color: #007bff;
@@ -313,14 +288,13 @@ button {
     cursor: pointer;
 }
 
-/* Adiciona hover para o botão */
 button:hover {
     background-color: #0056b3;
 }
 
-
 form {
-    width: 100vh;
+    width: 100%;
+    max-height: 100%
 }
 
 #footer {
@@ -343,21 +317,14 @@ form {
     }
 }
 
-/* Aplicando a animação aos elementos principais */
 #conteudo {
     animation: fadeIn 1s ease-out;
 }
-
-
 
 /* Responsividade */
 @media (max-width: 768px) {
     body {
         font-size: 1rem;
-    }
-
-    header {
-        padding: 15px 0;
     }
 
     #about .about-content {
@@ -375,72 +342,31 @@ form {
         font-size: 2rem;
     }
 
-    conteiner3 {
-        padding: 0;
-        width: 100%;
-        height: auto; /* Ajuste a altura para o conteúdo se expandir dinamicamente */
-        display: flex;
-        justify-content: center;
-        align-items: center; /* Alinha o conteúdo verticalmente ao centro */
-        margin: 10px;
-    }
-    
     #contact {
         padding: 30px 0;
-        background-color: #f4f4f9;
-        width: 100%;
-        max-width: 800px; /* Limita o tamanho máximo do formulário */
-        margin: 0 auto; /* Centraliza o conteúdo */
-        border-radius: 10px; /* Borda arredondada */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+        max-width: 800px;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    
+
     #contact .container {
         padding: 0 20px;
     }
-    
+
     #contact h2 {
         font-size: 2.5rem;
         color: #333;
         margin-bottom: 15px;
         text-align: center;
     }
-    
-    #contact h3 {
-        font-size: 1.2rem;
-        color: #555;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    
+
     #contact form {
         display: flex;
         flex-direction: column;
-        gap: 15px; /* Espaçamento entre os campos do formulário */
+        gap: 15px;
     }
-    
-    #contact .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    #contact .form-group input,
-    #contact .form-group select,
-    #contact .form-group textarea {
-        padding: 12px;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
-    }
-    
-    #contact .form-group input:focus,
-    #contact .form-group select:focus,
-    #contact .form-group textarea:focus {
-        border-color: #007bff;
-    }
-    
+
     #botaoImprimir {
         display: block;
         margin: 30px auto;
@@ -453,58 +379,40 @@ form {
         cursor: pointer;
         text-align: center;
     }
-    
+
     #botaoImprimir:hover {
         background-color: #0056b3;
     }
-    
-    /* Responsividade */
-    @media (max-width: 768px) {
-        #contact h2 {
-            font-size: 2rem;
-        }
-    
-        #contact form {
-            padding: 15px;
-        }
-    
-        #contact .form-group input,
-        #contact .form-group select,
-        #contact .form-group textarea {
-            padding: 12px;
-            font-size: 1rem;
-        }
-    }
-    
-    @media (max-width: 480px) {
-        #contact h2 {
-            font-size: 1.5rem;
-        }
-    
-        #contact .form-group input,
-        #contact .form-group select,
-        #contact .form-group textarea {
-            padding: 10px;
-            font-size: 0.9rem;
-        }
-    
-        #botaoImprimir {
-            font-size: 16px;
-            padding: 8px 16px;
-        }
-    }
-    
-    @media print {
-        conteiner1, conteiner2 {
-            display:none; /* Oculta todos os elementos na página */
-        }
-    
-        section * {
-            visibility: visible; /* Exibe apenas o conteúdo do formulário */
-        }
-    
-        #botaoImprimir {
-            display: none; /* Oculta o botão de imprimir durante a impressão */
-        }
+}
+
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 1.5rem;
     }
 
+    #contact .form-group input,
+    #contact .form-group select,
+    #contact .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    #botaoImprimir {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media print {
+    conteiner1, conteiner2 {
+        display: none;
+    }
+
+    section * {
+        visibility: visible;
+    }
+
+    #botaoImprimir {
+        display: none;
+    }
+}

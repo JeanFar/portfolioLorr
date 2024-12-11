@@ -66,7 +66,7 @@
                 financeira através da renda passiva proveniente dos seus
                 investimentos.</p>
             </li>
-
+</ul>
     </div>
 
 
@@ -102,7 +102,7 @@
                         <br>
 
                     <p id="acao">Vamos transformar seu patrimônio em verdadeira liberdade financeira! <br>
-                        Preencha o formulário abaixo, aperte o botão, e marcaremos uma reunião exclusiva e completamente gratuita, para eu te ouvir e explicar como posso te ajudar!</p>
+                        Preencha o formulário abaixo, aperte o botão, <br>e marcaremos uma reunião exclusiva e completamente gratuita, para eu te ouvir e explicar como posso te ajudar!</p>
                     <div class="social-links">
                         <ul id="contato-ul">
                             <li>
@@ -135,7 +135,7 @@
             <h2>Formulário de Inscrição</h2>
             <h3 id="instrucoes">Preencha este formulário de inscrição -> aperte o botão -> e me envie no whatsapp o arquivo -> <br>
                 <strong style="color: #ff5733;">Marcaremos uma reunião exclusiva e completamente gratuita, para eu te ouvir e explicar como posso te ajudar! <br>
-                Essa reunião será totalmente gratuita e personalizada!</strong>
+                </strong>
             </h3>
             <form action="#" method="post">
 
@@ -282,50 +282,9 @@
 
 <script>
 
-// Função JavaScript para mostrar os campos de "Quais?", "Renda Fixa" e "Renda Variável" dependendo da opção selecionada
-function mostrarInvestimentos() {
-    const investimentosExistentes = document.getElementById("investimentosExistentes");
-    const quaisInvestimentos = document.getElementById("quaisInvestimentos");
-    const investimentosRendaFixa = document.getElementById("investimentosRendaFixaCont");
-    const investimentosRendaVariavel = document.getElementById("investimentosRendaVariavelCont");
-
-    // Mostrar ou esconder "Quais?" com base na escolha "Outros"
-    if (investimentosExistentes.value === "outros") {
-        quaisInvestimentos.classList.remove("hidden");
-    } else {
-        quaisInvestimentos.classList.add("hidden");
-    }
-
-    // Mostrar ou esconder "Investimentos Renda Fixa" e "Investimentos Renda Variável"
-    if (investimentosExistentes.value !== "nao_invisto" && investimentosExistentes.value !== "") {
-        investimentosRendaFixa.classList.remove("hidden");
-        investimentosRendaVariavel.classList.remove("hidden");
-    } else {
-        investimentosRendaFixa.classList.add("hidden");
-        investimentosRendaVariavel.classList.add("hidden");
-    }
-}
-
-
-    const phoneInput = document.getElementById('telefone');
-    phoneInput.addEventListener('input', function(e) {
-        let phoneNumber = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
-        if (phoneNumber.length <= 2) {
-            phoneNumber = '+' + phoneNumber; // Adiciona o código do país
-        } else if (phoneNumber.length <= 4) {
-            phoneNumber = '+' + phoneNumber.slice(0, 2) + ' (' + phoneNumber.slice(2); // Código de país + DDD
-        } else if (phoneNumber.length <= 10) {
-            phoneNumber = '+' + phoneNumber.slice(0, 2) + ' (' + phoneNumber.slice(2, 4) + ') ' + phoneNumber.slice(4);
-        } else {
-            phoneNumber = '+' + phoneNumber.slice(0, 2) + ' (' + phoneNumber.slice(2, 4) + ') ' + phoneNumber.slice(4, 9) + '-' + phoneNumber.slice(9, 13);
-        }
-        e.target.value = phoneNumber;
-    });
-
     function imprimirFormulario() {
     window.print(); // Esta função abre a janela de impressão
 }
-
 </script>
 
 </body>
