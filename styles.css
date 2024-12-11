@@ -1,193 +1,335 @@
-        /* Reset e estrutura geral */
-        .hidden {
-            display: none;
-        }
-         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Reset e estrutura geral */
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
 
-        conteiner1 {
-            height: 100vh;
-        }
-        conteiner2 {
-            height: 100vh;
-        }
-        .container1, .container2 {
-            width: 100%; /* Cada container ocupa toda a largura da tela */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 2rem;
-            text-align: center;
-          }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    background-size: cover; /* Torna o gradiente suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    color: #E8C65B; /* Dourado pastel para o texto */
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
 
-        header {
-            background-color: #07291b;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            height: 100%;
-            width: 100%;
+p {
 
-        }
+    font-family: 'Playfair Display', serif; /* Fonte elegante */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+    text-align: left;
+    font-size: 2.8vh;
+    color: white;
+    
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+}
 
-        header p {
-            font-size: 1.2rem;
-        }
+#conteudo {
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    align-items: center; /* Centraliza horizontalmente os itens */
+}
 
-        /* Sobre mim */
-        #about {
-            padding: 60px 0;
-            background-color: #fff;
-        }
+conteiner1, conteiner2, conteiner3{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Espaçamento entre os blocos */
+    margin: 10px
+    padding: 0;
+    
+}
 
-        #about .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 30px;
-          
-        }
+#topo {
+    width: 60vh;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        #about .about-content img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(223, 14, 14, 0.1);
-        }
+}
 
-        #about .about-text {
-            flex: 1;
-        }
-        
+main {
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 10px 0; */
+    background: linear-gradient(145deg, #060706, #000000, #011801);
+    width: 100%;
+    height:100%;
+    border-radius: 1000px;
+    font-family: 'Playfair Display', serif; /* Fonte elegante */
+    font-size: 30px; /* Tamanho da fonte */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+    text-align: justify;
+    color: #E8C65B;
+    border: none; Sem borda para realce
+    box-shadow: 0 -4px 30px rgba(0, 51, 0, 0.3), 
+                0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para profundidade */
+    transition: transform 0.2s, box-shadow 0.2s; /* Suavidade */
+}
 
-        #about .about-text h2 {
-            font-size: 2.5rem;
-            color: #1e212d;
-            margin-bottom: 20px;
-        }
+#acao {
 
-        #about .about-text p {
-            font-size: 1.1rem;
-            color: #555;
-        }
+    font-size: 70%;
+    font-weight: bolder;
+    text-align: center;
 
-        #about .social-links ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            margin-top: 40px;
-        }
 
-        #about .social-links li {
-            display: inline;
-        }
 
-        #about .social-links a {
-            padding: 10px;
-            border-radius: 50%;
-            background-color: #1e212d;
-            color: #fff;
-            font-size: 1.5rem;
-        }
+}
 
-        /* Formulário */
-        #contact {
-            padding: 60px 0;
-            background-color: #f4f4f9;
-        }
 
-        #contact h2 {
-            font-size: 2.5rem;
-            color: #1e212d;
-            text-align: center;
-            margin-bottom: 30px;
-        }
 
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+#logo-sem-fundo {
+    width: 160vh;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        #contact .form-group {
-            margin-bottom: 20px;
-        }
+#titulo-pilar {
+    font-size: 6vh;
+    text-align: center;
+}
+#pilares {
+    max-width: 40%;
+    text-align: center;
+    margin-top: 0;
+}
 
-        #contact label {
-            display: block;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
+br {
+    height: 10px;
+}
 
-        #contact input,
-        #contact select,
-        #contact textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
 
-        #contact button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #1e212d;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
+#metodologia {
+    display: flex;
 
-        #contact button:hover {
-            background-color: #333;
-        }
 
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #1e212d;
-            color: #fff;
-        }
+    /* align-items: center; */
+    gap: 30px;
+    border-radius: 20px;
+    
+    display: flex;
+    /* justify-content: space-around; */
 
-        footer p {
-            font-size: 1rem;
-        }
+}
+
+#lemas {
+    display:flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    align-items: center;
+
+    margin-right: 200px;
+    margin-left: 200px;
+
+    font-size: 3vh;
+    
+}
+
+
+
+
+
+
+#gastarmenos, #ganharmais, #investirmelhor {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    flex-direction: column;
+    
+}
+
+
+
+h1 {
+
+    margin-top: 20px;
+
+
+
+
+}
+
+#lemas {
+    margin-top: 0;
+}
+ul {
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+#lema2 {
+    margin-bottom: 5%;
+}
+#lema3 {
+    margin-top: 4%;
+}
+
+li{
+
+    margin: 10px;
+    width: 90vh;
+    font-size: 2.53vh;
+    list-style-type: none;
+    width: 30%;
+    height: 30%;
+    margin: 3%;
+    padding: 0px;
+}
+
+
+
+#lema1, #lema2, #lema3 {
+    align-items: center;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+
+
+
+#logo-sem-fundo {
+
+    display:flex;
+    justify-self: start;
+}
+
+#about {
+    height: 100vh;
+    padding: 10px 0;
+    background: linear-gradient(145deg, #060706, #000000, #011801);
+    width: 100%;
+    border-radius: 20px;
+    font-family: 'Playfair Display', serif; /* Fonte elegante */
+    font-size: 30px; /* Tamanho da fonte */
+    line-height: 1.5; /* Espaçamento entre as linhas */
+    color: #E8C65B; /* Texto dourado pastel */
+    border: none; /* Sem borda para realce */
+    box-shadow: 0 -4px 30px rgba(0, 51, 0, 0.3), 
+                0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras para profundidade */
+    transition: transform 0.2s, box-shadow 0.2s; /* Suavidade */
+}
+
+#about .about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center; /* Garante que o texto fique centralizado */
+}
+
+#about .about-content img {
+    width: 100vh; /* Ajuste de tamanho para a imagem */
+    max-width: 40%; /* Garante que a imagem não ultrapasse o tamanho da tela */
+    border-radius: 50%; /* Deixa a imagem redonda */
+    margin: 30px;
+    padding: 10px; /* Adiciona o espaçamento interno */
+    border: 5px solid transparent;
+    background: linear-gradient(rgba(22, 22, 22, 0.021), black) padding-box, 
+                linear-gradient(45deg, #000000c4, #0f7956) border-box; /* Moldura dourada */
+    box-shadow: 0 8px 20px rgba(12, 83, 56, 0.5), /* Sombra dourada */
+                0 0 30px rgba(6, 134, 85, 0.3); /* Sombra adicional */
+}
+
+
+#about .about-text {
+    padding: 0 20px;
+}
+
+#contact {
+    padding: 30px 0;
+    background-color: #f4f4f9;
+    width: 100%;
+}
+
+/* Estilo para o container do formulário */
+.container {
+   
+    display: grid;
+    flex-direction:inherit;
+    justify-content: space-evenly; /* Distribui os elementos uniformemente ao longo da altura */
+    padding: 20px; /* Adiciona um pouco de espaço nas bordas */
+}
+
+/* Estilo para os grupos de formulários */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Espaço entre os campos */
+}
+
+/* Estilo para as labels */
+.form-group label {
+    font-size: 1.2rem;
+    margin-bottom: 5px; /* Espaço entre a label e o campo */
+}
+
+/* Estilo para os campos de entrada */
+.form-group input, .form-group select, .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Garantir que os campos de texto e áreas de texto se expandam para a largura total */
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+}
+
+/* Estilo para os botões */
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Adiciona hover para o botão */
+button:hover {
+    background-color: #0056b3;
+}
+
+
+form {
+    width: 100vh;
+}
+
+#footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 -4px 6px rgba(69, 150, 3, 0.1);
+}
 
 /* Animação de fade-in */
 @keyframes fadeIn {
@@ -202,11 +344,11 @@
 }
 
 /* Aplicando a animação aos elementos principais */
-#about .about-content, #contact form {
+#conteudo {
     animation: fadeIn 1s ease-out;
 }
 
-/
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -233,52 +375,77 @@
         font-size: 2rem;
     }
 
+    conteiner3 {
+        padding: 0;
+        width: 100%;
+        height: auto; /* Ajuste a altura para o conteúdo se expandir dinamicamente */
+        display: flex;
+        justify-content: center;
+        align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+        margin: 10px;
+    }
+    
+    #contact {
+        padding: 30px 0;
+        background-color: #f4f4f9;
+        width: 100%;
+        max-width: 800px; /* Limita o tamanho máximo do formulário */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        border-radius: 10px; /* Borda arredondada */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    }
+    
+    #contact .container {
+        padding: 0 20px;
+    }
+    
     #contact h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 15px;
+        text-align: center;
     }
-
+    
+    #contact h3 {
+        font-size: 1.2rem;
+        color: #555;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
     #contact form {
-        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; /* Espaçamento entre os campos do formulário */
     }
-
+    
+    #contact .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
     #contact .form-group input,
     #contact .form-group select,
     #contact .form-group textarea {
         padding: 12px;
         font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
     }
-
-    footer p {
-        font-size: 0.9rem;
+    
+    #contact .form-group input:focus,
+    #contact .form-group select:focus,
+    #contact .form-group textarea:focus {
+        border-color: #007bff;
     }
-}
-
-/* Para dispositivos móveis menores */
-@media (max-width: 480px) {
-    #about .about-text h2 {
-        font-size: 1.8rem;
-    }
-
-    #about .about-text p {
-        font-size: 1rem;
-    }
-
-    #contact form {
-        padding: 10px;
-    }
-
-    #contact .form-group input,
-    #contact .form-group select,
-    #contact .form-group textarea {
-        padding: 10px;
-        font-size: 0.9rem;
-    }
-
+    
     #botaoImprimir {
         display: block;
         margin: 30px auto;
         padding: 10px 20px;
-        font-size: 18px;
+        font-size: 1.2rem;
         background-color: #007bff;
         color: white;
         border: none;
@@ -290,22 +457,54 @@
     #botaoImprimir:hover {
         background-color: #0056b3;
     }
-
-    footer p {
-        font-size: 0.8rem;
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        #contact h2 {
+            font-size: 2rem;
+        }
+    
+        #contact form {
+            padding: 15px;
+        }
+    
+        #contact .form-group input,
+        #contact .form-group select,
+        #contact .form-group textarea {
+            padding: 12px;
+            font-size: 1rem;
+        }
     }
-}
-
-@media print {
-    header, #about * {
-        display:none; /* Oculta todos os elementos na página */
+    
+    @media (max-width: 480px) {
+        #contact h2 {
+            font-size: 1.5rem;
+        }
+    
+        #contact .form-group input,
+        #contact .form-group select,
+        #contact .form-group textarea {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+    
+        #botaoImprimir {
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+    }
+    
+    @media print {
+        conteiner1, conteiner2 {
+            display:none; /* Oculta todos os elementos na página */
+        }
+    
+        section * {
+            visibility: visible; /* Exibe apenas o conteúdo do formulário */
+        }
+    
+        #botaoImprimir {
+            display: none; /* Oculta o botão de imprimir durante a impressão */
+        }
     }
 
-    section * {
-        visibility: visible; /* Exibe apenas o conteúdo do formulário */
-    }
-
-    #botaoImprimir {
-        display: none; /* Oculta o botão de imprimir durante a impressão */
-    }
-}
