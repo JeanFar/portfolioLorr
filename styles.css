@@ -12,6 +12,12 @@ a {
     text-decoration: none;
 }
 
+#but-imp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     /* line-height: 1.6; */
