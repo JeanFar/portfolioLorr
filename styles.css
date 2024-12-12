@@ -1,26 +1,43 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
 }
+#form-title {
+    font-size: 4rem;
+    margin-top: 5%;
 
+}
 a {
     text-decoration: none;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    /* line-height: 1.6; */
     background-color: black;
     background-size: cover; 
-    display: flex;
+  
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 0;
     margin: 0;
     color: black; 
-    font-size: 1.2rem; /* Ajuste para uma unidade mais consistente */
+    
+    overflow-x: hidden;
+}
+
+
+
+#pilares {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left: 0;
+    font-size: 5 rem;
+
+
 }
 
 p {
@@ -29,6 +46,35 @@ p {
     line-height: 1.5;
     text-align: left;
     color: white;
+    margin-left: 0;
+
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 3%;
+}
+
+#quem {
+    font-size: 2rem;
+    margin-bottom: 0%;
+}
+
+#about {
+    margin-top: 2%;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+#contato-ul {
+    text-align: center;
+    justify-content: center;
+    margin-top: 4%
+}
+
+
+.conteiner3 {
+    padding-top: 0%;
 }
 
 #conteudo {
@@ -37,6 +83,7 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 100%;
 }
 
 #conteiner1, #conteiner2 {
@@ -44,9 +91,9 @@ p {
   
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 0;
     margin: 10px;
-    width: 100%;
+    width: 90%;
     max-width: 100%; /* Limita o máximo para 100% da largura disponível */
     height: auto;
 }
@@ -54,30 +101,58 @@ p {
 
 
 
-#topo {
-    width: 60vh;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#logo-sem-fundo {
+    width: 25%;
+    max-width: 25%;
+    height: auto;
 }
 
 main {
-    
-    flex-direction: column;
+    display: flex;
+    flex-direction: column; /* Muda para coluna em layouts menores */
     align-items: center;
     background: linear-gradient(145deg, #060706, #000000, #011801);
-    width: 100%;
-    border-radius: 1000px;
+    width: 100%; /* Garante que ocupa toda a largura */
+    max-width: 100%; /* Impede exceder o tamanho da tela */
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 3rem; /* Ajuste para unidades responsivas */
     line-height: 1.5;
     text-align: justify;
     color: #E8C65B;
     border: none;
-    box-shadow: 0 -4px 30px rgba(0, 51, 0, 0.3), 
-                0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e border no tamanho */
     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#conteiner1, #conteiner2 {
+    display: flex;
+    flex-direction: row; /* Padrão: layout em linha */
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Garante que ocupa toda a largura */
+    max-width: 1200px; /* Limita o tamanho máximo */
+    margin: 20px auto; /* Centraliza e adiciona margem */
+    box-sizing: border-box;
+}
+
+/* Responsividade para dispositivos menores */
+@media (max-width: 768px) {
+    #conteiner1, #conteiner2 {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        width: 100%; /* Ajusta largura para caber na tela */
+        max-width: 100%; /* Garante que não exceda a tela */
+        margin: 10px auto; /* Ajusta margens para centralizar */
+    }
+}
+
+@media (max-width: 480px) {
+    #conteiner1, #conteiner2 {
+        width: 100%; /* Ajusta largura para caber na tela */
+        max-width: 100%; /* Garante que não exceda a tela */
+        padding: 10px; /* Adiciona espaçamento interno */
+        margin: 5px auto; /* Margem menor para telas muito pequenas */
+    }
 }
 
 #acao {
@@ -100,15 +175,16 @@ main {
 }
 
 #pilares {
-    max-width: 20%;
+    max-width: 70%;
     text-align: center;
     margin-top: 0;
+    width: 70%;
 }
 
 #metodologia {
     display: flex;
     gap: 30px;
-    border-radius: 20px;
+    
     max-width: 100%;
 }
 
@@ -118,10 +194,23 @@ main {
     display: flex;
     flex-direction: row; /* Organiza em linha por padrão */
     align-items: center;
-    margin-right: 200px;
+    margin-right: 10%;
     margin-left: 20%;
     font-size: 3vh;
 }
+p {
+    max-width: 80%;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+#lema1, #lema2, #lema3 {
+
+    min-width: 30%;
+
+
+}
+
 
 #gastarmenos, #ganharmais, #investirmelhor {
     display: flex;
@@ -136,6 +225,8 @@ main {
         margin-left: 0; /* Remove a margem esquerda para telas menores */
         margin-right: 0; /* Remove a margem direita para telas menores */
         font-size: 4vh; /* Ajusta o tamanho da fonte para telas menores */
+        width: 0%; /* Ajusta largura para caber na tela */
+        max-width: 100%; /* Garante que não exceda a tela */
     }
 
     #gastarmenos, #ganharmais, #investirmelhor {
@@ -185,20 +276,19 @@ li {
 }
 
 #about {
-    margin: 1%;
+    
     max-width: 100%;
     height: 100%;
-    padding: 10px 0;
+    padding: 0;
     background: linear-gradient(145deg, #060706, #000000, #011801);
     width: 100%;
-    border-radius: 20px;
+ 
     font-family: 'Playfair Display', serif;
     font-size: 30px;
     line-height: 1.5;
     color: #E8C65B;
     border: none;
-    box-shadow: 0 -4px 30px rgba(0, 51, 0, 0.3), 
-                0 4px 6px rgba(0, 0, 0, 0.1);
+
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -210,21 +300,18 @@ li {
     text-align: center;
 }
 
-#about .about-content img {
+#perfil {
     width: 100%;
     max-width: 40%;
-    border-radius: 50%;
-    margin: 30px;
-    padding: 10px;
-    border: 5px solid transparent;
-    background: linear-gradient(rgba(22, 22, 22, 0.021), black) padding-box, 
-                linear-gradient(45deg, #000000c4, #0f7956) border-box;
-    box-shadow: 0 8px 20px rgba(12, 83, 56, 0.5),
-                0 0 30px rgba(6, 134, 85, 0.3);
+    border-radius: 20%;
+    margin: 0px;
+    padding: 0px;
+
 }
 
 #about .about-text {
     padding: 0;
+    font-size: 18px; /* Defina um valor fixo que seja confortável para leitura */
 }
 
 #contact {
@@ -234,13 +321,16 @@ li {
     max-height: 100%;
   
 }
+
 form{
     width: 100%
+    max-width: 100%;
 }
 conteiner3 {
     width: 100%;
     max-width: 100%;
-    height: auto;
+ 
+    
 }
 
 
@@ -248,10 +338,11 @@ conteiner3 {
 .container {
     display: grid;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 0px;
     width: 100%;
     max-width: 100%;
     max-height: 100%;
+    margin-top: 10%;
 }
 
 .form-group {
@@ -266,15 +357,23 @@ conteiner3 {
     color: black;
 }
 
-.form-group label {
+label {
     font-size: 1.2rem;
     margin-bottom: 5px;
     color: black;
+    font-size: 1.5rem;
+    text-align: left;
 }
+
+.form-group {
+    margin-left: 5%;
+}
+
+
 
 .form-group input, .form-group select, .form-group textarea {
     padding: 10px;
-    font-size: 1rem;
+    font-size: 2rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
@@ -288,7 +387,13 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 20%;
+    height: 2%;
+    font-size: 100%;
+    font-weight: bolder;
 }
+
+
 
 button:hover {
     background-color: #0056b3;
@@ -301,10 +406,10 @@ form {
 
 #footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 0;
     color: #fff;
     width: 100%;
-    box-shadow: 0 -4px 6px rgba(69, 150, 3, 0.1);
+   
 }
 
 /* Animação de fade-in */
@@ -325,86 +430,284 @@ form {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    body {
-        font-size: 1rem;
-    }
 
-    #about .about-content {
-        flex-direction: column;
+    * {
+        padding: 0;
+        margin: 0;
+        justify-content: center;
         text-align: center;
-    }
-
-    #about .about-content img {
         width: 100%;
-        max-width: 300px;
-        margin-bottom: 20px;
+        
+        }
+    
+        #contact h2 {
+            font-size: 1.5rem;
+        }
+    
+    main {
+        margin: 0;
+        padding: 0;
     }
-
-    #about .about-text h2 {
-        font-size: 2rem;
-    }
-
-    #contact {
-        padding: 30px 0;
-        max-width: 800px;
-        margin: 0 auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    #contact .container {
-        padding: 0 20px;
-    }
-
-    #contact h2 {
-        font-size: 2.5rem;
-        color: #333;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    #contact form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    #botaoImprimir {
-        display: block;
-        margin: 30px auto;
-        padding: 10px 20px;
+     #logo-sem-fundo {
+        width: 100%;
+        max-width: 90%;
+        height: auto;
+     }
+    
+     #titulo-pilar {
+        font-size: 1.7rem;
+     }
+    
+     #pilares {
         font-size: 1.2rem;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        text-align: center;
+     }
+    
+    #lemas {
+        max-width: 100%;
+        width: 100%;
     }
-
-    #botaoImprimir:hover {
-        background-color: #0056b3;
+    
+    #lema1, #lema2, #lema3 {
+    
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        padding: 0;
+    
     }
-}
+    
+    #gastarmenos, #ganharmais, #investirmelhor {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .texto-lema {
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    
+     #perfil {
+        padding: 0;
+        margin: 0;
+    
+    
+     }
+        #contact .form-group input,
+        #contact .form-group select,
+        #contact .form-group textarea {
+            padding: 0px;
+            font-size: 1rem;
+            max-width: 100%;
+            width: 100%;
+        }
+    
+        #botaoImprimir {
+            font-size: 16px;
+            padding: 0;
+            width: 50%;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+        }
+    
+        #but-imp {
+            max-width: 50%;
+            width: 50%;
+            align-items: left;
+            display: flex;
+            padding: 0;
+            justify-content: left;
+            
+        }
+    
+        #aviso {
+    
+            max-width: 80%;
+    
+        }
+        h2 {
+        margin-top: 10%;
+        }
+    
+        conteiner1 {
+        max-width: 100%;
+        width: 100%;
+        }
+    
+    
+    .form-group {
+        font-size: 1rem;
+        text-align: left;
+        height: auto;
+    
+    
+    }
+    
+    
+    
+    }
+    @media print {
+        conteiner1, conteiner2 {
+            display: none;
+        }
+    
+        section * {
+            visibility: visible;
+        }
+    
+        #botaoImprimir {
+            display: none;
+        }
+    }
+    
 
 @media (max-width: 480px) {
-    #contact h2 {
-        font-size: 1.5rem;
+
+    * {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    
     }
 
+    #contact h2 {
+        font-size: 3rem;
+    }
+
+
+#perfil {
+    max-width: 100%;
+    width: 70%;
+
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+}
+.about-text{
+
+max-height: 100%;
+
+
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+ #logo-sem-fundo {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+ }
+
+ #titulo-pilar {
+    font-size: 1.7rem;
+ }
+
+ #pilares {
+    font-size: 1.2rem;
+ }
+
+#lemas {
+    max-width: 100%;
+    width: 100%;
+}
+
+#lema1, #lema2, #lema3 {
+
+    max-width: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 0;
+
+}
+
+#gastarmenos, #ganharmais, #investirmelhor {
+    margin: 0;
+    padding: 0;
+}
+
+.texto-lema {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+ #perfil {
+    padding: 0;
+    margin: 0;
+
+
+ }
     #contact .form-group input,
     #contact .form-group select,
     #contact .form-group textarea {
-        padding: 10px;
-        font-size: 0.9rem;
+        padding: 0px;
+        font-size: 1rem;
+        max-width: 100%;
+        width: 100%;
     }
 
     #botaoImprimir {
         font-size: 16px;
-        padding: 8px 16px;
+        padding: 0;
+        width: 50%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
     }
+
+    #but-imp {
+        max-width: 50%;
+        width: 50%;
+        align-items: left;
+        display: flex;
+        padding: 0;
+        justify-content: left;
+        
+    }
+
+    #aviso {
+
+        max-width: 80%;
+
+    }
+    h2 {
+    margin-top: 10%;
+    }
+
+    conteiner1 {
+    max-width: 100%;
+    width: 100%;
+    }
+
+
+.form-group {
+    font-size: 1rem;
+    text-align: left;
+    height: auto;
+
+
 }
 
+
+
+}
 @media print {
     conteiner1, conteiner2 {
         display: none;
