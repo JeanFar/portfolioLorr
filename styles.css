@@ -337,12 +337,18 @@ label {
 
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input, .form-group select {
     padding: 10px;
     font-size: 2rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
+}
+
+.form-group textarea {
+    font-size: 1.5rem;
+    text-align: justify;
+
 }
 
 #but-imp {
@@ -540,8 +546,7 @@ label {
      }
      /* --------------------------------------------------------------------------------------- */
         #contact .form-group input,
-        #contact .form-group select,
-        #contact .form-group textarea {
+        #contact .form-group select {
             padding: 0px;
             font-size: 2rem;
             max-width: 100%;

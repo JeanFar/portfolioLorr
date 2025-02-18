@@ -6,7 +6,7 @@
     <title>Portfólio - Lorran</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Roboto:wght@300;500;700&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" media="(max-width: 800px)" href="example.css" />
+    <link rel="stylesheet" media="(max-width: 800px)" href="./styles.css" />
     <script src="script.js" defer></script>
 
     <link rel="stylesheet" href="./styles.css">
@@ -161,7 +161,7 @@
                     <!-- Nome e Sobrenome -->
                     <div class="form-group">
                         <label for="nome">Nome e Sobrenome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                        <textarea class="text-area" type="text"  id="nome" name="nome" placeholder="Seu nome" required></textarea>
                     </div>
         
                     <!-- Telefone -->
@@ -179,7 +179,7 @@
                     <!-- Profissão -->
                     <div class="form-group">
                         <label for="profissao">Profissão</label>
-                        <input type="text" id="profissao" name="profissao" placeholder="Sua profissão" required>
+                        <textarea class="text-area" type="text" id="profissao" name="profissao" placeholder="Sua profissão" required></textarea>
                     </div>
         
                     <!-- Categoria -->
@@ -210,13 +210,13 @@
                     <!-- Filhos e/ou Dependentes -->
                     <div class="form-group">
                         <label for="dependentes">Filhos e/ou Dependentes</label>
-                        <input type="text" id="dependentes" name="dependentes" placeholder="Detalhe os filhos/dependentes">
+                        <textarea class="text-area" type="text" id="dependentes" name="dependentes" placeholder="Detalhe os filhos/dependentes"></textarea>
                     </div>
         
                     <!-- Renda Líquida -->
                     <div class="form-group">
                         <label for="rendaliquida">Renda Líquida Média Mensal</label>
-                        <input type="text" id="rendaliquida" name="rendaliquida" placeholder="Detalhe salários, bônus e outras receitas" required>
+                        <textarea class="text-area" type="text" id="rendaliquida" name="rendaliquida" placeholder="Detalhe salários, bônus e outras receitas" required></textarea>
                     </div>
         
                     <!-- Moradia -->
@@ -234,7 +234,7 @@
                     <!-- Valor Mensal para Investimentos -->
                     <div class="form-group">
                         <label for="investimentos">Qual o valor mensal que você pretende direcionar para investimentos?</label>
-                        <input type="text" id="investimentos" name="investimentos" placeholder="Valor mensal para investimentos" required>
+                        <textarea class="text-area" type="text" id="investimentos" name="investimentos" placeholder="Valor mensal para investimentos" required></textarea>
                     </div>
         
                     <div class="form-group">
@@ -252,46 +252,46 @@
                     <!-- Campo adicional para "Quais?" se a opção "Outros" for escolhida -->
                     <div class="form-group hidden" id="quaisInvestimentos">
                         <label for="quaisInvestimentos">Quais?</label>
-                        <input type="text" id="quaisInvestimentos" name="quaisInvestimentos" placeholder="Detalhe as fontes de investimento">
+                        <textarea class="text-area" type="text" id="quaisInvestimentos" name="quaisInvestimentos" rows="4" placeholder="Detalhe as fontes de investimento"></textarea>
                     </div>
         
                     <!-- Investimentos de Renda Fixa -->
                     <div class="form-group" id="investimentosRendaFixaCont">
                         <label for="investimentosRendaFixa">Relação de Investimentos Pessoais de Renda Fixa (se houver)</label>
-                        <textarea id="investimentosRendaFixa" name="investimentosRendaFixa" rows="4" placeholder="Descreva os investimentos de renda fixa e valores atuais"></textarea>
+                        <textarea class="text-area"  id="investimentosRendaFixa" name="investimentosRendaFixa" rows="4" placeholder="Descreva os investimentos de renda fixa e valores atuais"></textarea>
                     </div>
         
                     <!-- Investimentos de Renda Variável -->
                     <div class="form-group" id="investimentosRendaVariavelCont">
                         <label for="investimentosRendaVariavel">Relação de Investimentos Pessoais de Renda Variável (se houver)</label>
-                        <textarea id="investimentosRendaVariavel" name="investimentosRendaVariavel" rows="4" placeholder="Descreva os investimentos de renda variável e valores atuais"></textarea>
+                        <textarea class="text-area"  id="investimentosRendaVariavel" name="investimentosRendaVariavel" rows="4" placeholder="Descreva os investimentos de renda variável e valores atuais"></textarea>
                     </div>
         
                     <!-- Relação Patrimonial -->
                     <div class="form-group">
                         <label for="relacaoPatrimonial">Relação Patrimonial Pessoal (se houver)</label>
-                        <textarea id="relacaoPatrimonial" name="relacaoPatrimonial" rows="4" placeholder="Descreva a relação patrimonial pessoal"></textarea>
+                        <textarea class="text-area"  id="relacaoPatrimonial" name="relacaoPatrimonial" rows="4" placeholder="Descreva a relação patrimonial pessoal"></textarea>
                     </div>
         
                     <!-- Relação de Seguros -->
                     <div class="form-group">
                         <label for="segurosContratados">Relação de Seguros Contratados</label>
-                        <textarea id="segurosContratados" name="segurosContratados" rows="4" placeholder="Seguros veiculares, de vida, previdência, etc."></textarea>
+                        <textarea class="text-area"  id="segurosContratados" name="segurosContratados" rows="4" placeholder="Seguros veiculares, de vida, previdência, etc."></textarea>
                     </div>
 
                     <!-- Relação de Dívidas -->
                     <div class="form-group">
                         <label for="relacaoPatrimonial">Relação de Dívidas (se houver)</label>
-                        <textarea id="relacaoPatrimonial" name="relacaoPatrimonial" rows="4" placeholder="Descreva suas dívidas (financiamentos, empréstimos, etc.)"></textarea>
+                        <textarea  class="text-area" id="relacaoPatrimonial" name="relacaoPatrimonial" rows="4" placeholder="Descreva suas dívidas (financiamentos, empréstimos, etc.)"></textarea>
                     </div>
         
                     <!-- Objetivos Financeiros e Motivação -->
                     <div class="form-group">
                         <label for="objetivosFinanceiros">Principais Objetivos Financeiros e Motivação para Contratação da Consultoria Financeira</label>
-                        <textarea id="objetivosFinanceiros" name="objetivosFinanceiros" rows="4" placeholder="Descreva seus objetivos financeiros e motivação"></textarea>
+                        <textarea class="text-area"  id="objetivosFinanceiros" name="objetivosFinanceiros" rows="4" placeholder="Descreva seus objetivos financeiros e motivação"></textarea>
                     </div>
 
-                    <!-- Objetivos Financeiros e Motivação -->
+
                
         
 

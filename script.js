@@ -23,3 +23,16 @@ threshold: 0.5 // Define que 50% do elemento precisa estar visível para ativar 
 
 // Comece a observar o elemento #about
 observer.observe(aboutElement);
+
+//--------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+    const textareas = document.querySelectorAll(".text-area");
+
+    textareas.forEach(textarea => {
+        textarea.addEventListener("input", function () {
+            this.style.height = "auto"; // Reseta a altura antes de calcular o novo tamanho
+            this.style.height = this.scrollHeight + "px"; // Define a nova altura
+        });
+    });
+});
