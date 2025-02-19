@@ -1,7 +1,31 @@
 function imprimirFormulario() {
-    window.print(); // Esta função abre a janela de impressão
-}
+    const textareas = document.querySelectorAll(".text-area");
+    const divs = [];
 
+    textareas.forEach(textarea => {
+        const div = document.createElement("div");
+        div.textContent = textarea.value; // Copia o conteúdo
+        div.style.cssText = `
+            min-height: ${textarea.scrollHeight}px;
+            width: ${textarea.offsetWidth}px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+            text-align: left;
+        `;
+
+        textarea.parentNode.replaceChild(div, textarea);
+        divs.push({ div, textarea }); // Guarda referência para restaurar depois
+    });
+
+    window.print();
+
+    // Restaurar os textareas após a impressão
+    divs.forEach(({ div, textarea }) => {
+        div.parentNode.replaceChild(textarea, div);
+    });
+}
 
 // Selecione o elemento #about
 const aboutElement = document.querySelector('#about');
