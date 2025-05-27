@@ -1,10 +1,31 @@
-function imprimirFormulario() {
+document.addEventListener("DOMContentLoaded", function () {
     const textareas = document.querySelectorAll(".text-area");
-    const divs = [];
 
     textareas.forEach(textarea => {
+        textarea.addEventListener("input", function () {
+            this.style.height = "auto"; // Reseta a altura antes de calcular o novo tamanho
+            this.style.height = this.scrollHeight + "px"; // Define a nova altura
+        });
+    });
+});
+
+
+function imprimirFormulario() {
+    // 1. Pegue o valor ANTES de mexer no DOM
+    const nomeElemento = document.getElementById("nome");
+    if (!nomeElemento) {
+        alert("Campo nome não encontrado!");
+        return;
+    }
+    const nomeCampo = nomeElemento.value.trim();
+    const nomeLimpo = nomeCampo.replace(/[\\/:*?"<>|]/g, '').substring(0, 15);
+
+    // 2. Substitua os textareas por divs
+    const textareas = document.querySelectorAll(".text-area");
+    const divs = [];
+    textareas.forEach(textarea => {
         const div = document.createElement("div");
-        div.textContent = textarea.value; // Copia o conteúdo
+        div.textContent = textarea.value;
         div.style.cssText = `
             min-height: ${textarea.scrollHeight}px;
             width: ${textarea.offsetWidth}px;
@@ -13,20 +34,28 @@ function imprimirFormulario() {
             white-space: pre-wrap;
             overflow-wrap: break-word;
             text-align: left;
+            font-size: 2rem;      /* <-- Mantém o mesmo tamanho da fonte */
+            text-align: justify;  /* <-- Mantém a mesma alinhamento que seu CSS */
         `;
-
         textarea.parentNode.replaceChild(div, textarea);
-        divs.push({ div, textarea }); // Guarda referência para restaurar depois
+        divs.push({ div, textarea });
     });
 
+    // 3. Atualiza título da página
+    const tituloOriginal = document.title;
+    document.title = `${nomeLimpo || "Sem_Nome"} - Anamnese Financeira`;
+
+    // 4. Executa a impressão
     window.print();
 
-    // Restaurar os textareas após a impressão
-    divs.forEach(({ div, textarea }) => {
-        div.parentNode.replaceChild(textarea, div);
-    });
+    // 5. Restaura os textareas e o título original após impressão
+    setTimeout(() => {
+        divs.forEach(({ div, textarea }) => {
+            div.parentNode.replaceChild(textarea, div);
+        });
+        document.title = tituloOriginal;
+    }, 1000);
 }
-
 // Selecione o elemento #about
 const aboutElement = document.querySelector('#about');
 
@@ -50,13 +79,3 @@ observer.observe(aboutElement);
 
 //--------------------------------------------------------
 
-document.addEventListener("DOMContentLoaded", function () {
-    const textareas = document.querySelectorAll(".text-area");
-
-    textareas.forEach(textarea => {
-        textarea.addEventListener("input", function () {
-            this.style.height = "auto"; // Reseta a altura antes de calcular o novo tamanho
-            this.style.height = this.scrollHeight + "px"; // Define a nova altura
-        });
-    });
-});

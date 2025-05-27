@@ -346,7 +346,7 @@ label {
 }
 
 .form-group textarea {
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-align: justify;
 
 }
@@ -385,9 +385,14 @@ label {
 
 /* ------------------------------------------------------------------------ */
 @media print {
+    .text-area-replacement {
+    font-size: 2rem;
+    text-align: justify;
+  }
     conteiner1, conteiner2 {
         display: none;
     }
+    
 
     section * {
         visibility: visible;
