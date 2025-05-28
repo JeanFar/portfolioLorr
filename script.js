@@ -53,7 +53,7 @@ function imprimirFormulario() {
         divs.forEach(({ div, textarea }) => {
             div.parentNode.replaceChild(textarea, div);
         });
-        document.title = tituloOriginal;
+        
     }, 1000);
 }
 // Selecione o elemento #about
